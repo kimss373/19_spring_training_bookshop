@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mybatis Config 파일임을 명시하기 위한 DTD 선언문(필수) -->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">	
+
+<configuration>
+
+	<!-- 
+	
+		<settings>
+			<setting name="mapUnderscoreToCamelCase" value="true"/>
+		</settings>
+		
+		-  POJO Property(Camel Case), Table Column(Snake Case)형태로 데이타가 설계된 전제하에 
+		   Mybatis Mapper에서 반환 데이터의 resultMap을 사용하지 않아도 POJO의 프로퍼티와 테이블의 컬럼명을 바인딩 한다. 
+	
+	-->
+
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	
+	<!-- 
+	
+		- parameterType 속성 및 resultType 속성 값이 길어질 경우 
+		  <typeAliases> 태그로 alias(별명,별칭)을 지정하여 간편하게 사용할 수 있다.
+	
+		    Ex)
+			<typeAliases>
+				<typeAlias type="com.spring.lms.product.dto.ProductDTO" alias="ProductDTO" />
+				<typeAlias type="com.spring.lms.member.dto.MemberDTO"  alias="MemberDTO"/>
+				<typeAlias type="com.spring.lms.message.dto.MessageDTO" alias="MessageDTO"/>
+			</typeAliases>
+		
+	 -->
+	 <typeAliases>
+		<typeAlias type="com.spring.training.board.dto.BoardDTO" 			alias="BoardDTO"/>
+		<typeAlias type="com.spring.training.member.dto.MemberDTO" 			alias="MemberDTO"/>
+		<typeAlias type="com.spring.training.boardAdvance.dto.MainBoardDTO" alias="MainBoardDTO"/>
+		<typeAlias type="com.spring.training.boardAdvance.dto.ReplyDTO" 	alias="ReplyDTO"/>
+	</typeAliases>
+
+</configuration>
